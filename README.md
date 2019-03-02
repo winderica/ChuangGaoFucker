@@ -8,30 +8,30 @@
 3. 确保已经安装`Python3`
 4. 安装frida
     ```sh
-        $ pip install frida
+    $ pip install frida
     ```
 5. 下载对应架构的[frida-server](https://github.com/frida/frida/releases)，并解压
 6. 连接手机，将frida-server运行在手机上
     ```sh
-        $ cd platform-tools/ # 自行替换路径，不再赘述
-        $ ./adb root
-        $ ./adb push frida-server /data/local/tmp/
-        $ ./adb shell "chmod 755 /data/local/tmp/frida-server"
-        $ ./adb shell "/data/local/tmp/frida-server &"
+    $ cd platform-tools/ # 自行替换路径，不再赘述
+    $ ./adb root
+    $ ./adb push frida-server /data/local/tmp/
+    $ ./adb shell "chmod 755 /data/local/tmp/frida-server"
+    $ ./adb shell "/data/local/tmp/frida-server &"
     ```
     以后每次运行只需输入如下命令
     ```sh
-        $ ./adb root
-        $ ./adb shell "/data/local/tmp/frida-server &"
+    $ ./adb root
+    $ ./adb shell "/data/local/tmp/frida-server &"
     ```
 7. 为确保frida-server已经运行，输入
     ```sh
-        $ frida-ps -U
+    $ frida-ps -U
     ```
     此时将输出进程列表。
 8. 输入
     ```sh
-        $ frida -l hooks.js -U -f net.crigh.cgsport --no-pause
+    $ frida -l hooks.js -U -f net.crigh.cgsport --no-pause
     ```
     此时应用开启，进入开始跑步后直接结束即可完成。
     
