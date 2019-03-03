@@ -313,8 +313,8 @@ function padZero(value) {
 
 function generateCoordinate(x, y) {
     return {
-        "a": x,
-        "o": y,
+        "a": +x,
+        "o": +y,
         "v": 1,
         "s": 0,
         "t": 0,
@@ -374,8 +374,8 @@ function generateData() {
     coordinate.push(generateCoordinate(beganX, beganY));
     for (var i = 0; i < points.length; i++) {
         var point = points[i].split(', ');
-        var x = +point[0] + ((i === 0 || i === points.length - 1) ? 0 : Math.random() / 10e2);
-        var y = +point[1] + ((i === 0 || i === points.length - 1) ? 0 : Math.random() / 10e2);
+        var x = +point[0] + Math.random() / 10e2;
+        var y = +point[1] + Math.random() / 10e2;
         coordinate.push(generateCoordinate(x, y));
     }
     coordinate.push(generateCoordinate(endX, endY));
