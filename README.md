@@ -37,7 +37,7 @@
     
     数据是随机且精心设计的，除了路线，有需要可自行更改`beganPoint`、`endPoint`、`points`，之后会加入更改路线的功能。
     
-    若有报错的情况，请重新运行上述命令；同时可能会伴随着重启，请享受这个过程。
+    若有报错的情况，请在`hook.js`中注释掉[第407行](https://github.com/featherin/ChuangGaoFucker/blob/294129a30a39b1c3630580f7a521b5c92e1b06e7/hooks.js#L407)；同时可能会伴随着重启，请享受这个过程。
     
     仍然没法执行，请提issue。
 
