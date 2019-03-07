@@ -41,12 +41,14 @@
     
     仍然没法执行，请提issue。
 
+### Notifications
+
+* 目前由于没有hook setter，应用内的数据会与上传的数据不同。清除应用的数据、缓存后重新打开即可正常显示。详见[这个issue](https://github.com/featherin/ChuangGaoFucker/issues/3#issuecomment-470395474)
+* 想要改`hook.js`，请注意frida不支持ES6及其以上的特性
+
 ### TODO
 
+* 更改setter
 * 用户自定义路线
 * 原理
 * 通过`frida-gadget`实现免root
-
-### Notifications
-
-* 想要改`hook.js`，请注意frida不支持ES6及其以上的特性
